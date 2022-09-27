@@ -14,7 +14,9 @@ class OptionsSubState extends MusicBeatSubstate
 	var curSelected:Int = 0;
 
 	var grpOptionsTexts:FlxTypedGroup<FlxText>;
-
+#if android
+	addVirtualPad(FULL, A_B);
+        #end
 	public function new()
 	{
 		super();

@@ -43,6 +43,9 @@ class Option
 {
 	public function new()
 	{
+#if android
+	addVirtualPad(FULL, A_B);
+        #end
 		display = updateDisplay();
 	}
 	private var description:String = "";

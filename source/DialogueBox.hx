@@ -291,10 +291,6 @@ class DialogueBox extends FlxSpriteGroup
 		}
 		#end
 
-                if (controls.ACCEPT #if android || justTouched #end)
-                {
-                        //Will do something
-                }
 		// HARD CODING CUZ IM STUPDI
 		if (PlayState.SONG.song.toLowerCase() == 'roses')
 			portraitLeft.visible = false;
@@ -329,7 +325,7 @@ class DialogueBox extends FlxSpriteGroup
 
 		}
 
-		if (FlxG.keys.justPressed.ANY && dialogueStarted == true && canAdvance && !isEnding)
+		if (FlxG.keys.justPressed.ANY #if android || justTouched #end && dialogueStarted == true && canAdvance && !isEnding)
 			{
 				remove(dialogue);
 				canAdvance = false;

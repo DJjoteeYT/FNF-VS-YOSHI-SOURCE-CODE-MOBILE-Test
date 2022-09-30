@@ -59,7 +59,7 @@ jobs:
           haxelib --quiet install newgrounds 1.3.0
           haxelib git polymod https://github.com/MasterEric/polymod.git
           haxelib git extension-webview https://github.com/HaxeExtension/extension-webview
-          haxelib git extension-androidtools https://github.com/MAJigsaw77/extension-androidtools.git
+          haxelib --quiet install extension-androidtools https://github.com/MAJigsaw77/extension-androidtools
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
